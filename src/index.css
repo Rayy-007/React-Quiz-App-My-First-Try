@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  outline: none;
+}
+
+body {
+  background-color: #f5f7fb;
+  background-image: url("./images/blue.png"), url("./images/orange.png");
+  /* min-width: 320px; */
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: left bottom, top right, bottom right;
+  background-attachment: fixed;
+}
+
+.container {
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ===== Intro Section ===== */
+.intro-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #293264;
+  gap: 20px;
+}
+.intro-container > h1 {
+  font-size: 3.5em;
+}
+
+.intro-container > button {
+  width: 200px;
+  padding: 0.7em 1.5em;
+  font-size: 1.2em;
+  background: #293264;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.intro-container > button:hover,
+.check-btn:hover {
+  background: #3b457d;
+}
+
+.intro-container > button:active,
+.check-btn:active {
+  /* outline: 2px solid #3b457d; */
+  transform: scale(1.03);
+  font-size: 1.18em;
+}
+
+/* ===== Question Or Main Sesstion ===== */
+.question-container {
+  /* background-color: white; */
+  margin: 0 auto;
+  /* padding: 1em; */
+  width: 80%;
+}
+
+.main-container {
+  border-bottom: 1px solid #dbdef0;
+  color: #293264;
+  padding: 1em;
+}
+
+.main-container > h2 {
+  margin-bottom: 0.5em;
+}
+
+.btn-container {
+  padding: 0.5em 0 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-container .btn {
+  font-size: 1.2em;
+  background: transparent;
+  border: 1px solid #293264;
+  margin-right: 1em;
+  width: max-content;
+  padding: 0.3em 0.9em;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-container .btn:hover {
+  /* background: #3e3f40; */
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.24);
+}
+/* .main-container .btn:active {
+} */
+
+.check-btn {
+  background: #4d5b9e;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  margin: 20px auto 10px 160px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* === ADD Class Name from JS === */
+.btn.clickedBtn {
+  background: #d6dbf5;
+}
+
+/* #94D7A2 #F8BCBC */
+
+/* ==== Media Query ===== */
+@media only screen and (max-width: 880px) {
+  body {
+    background-size: 200px;
+  }
+  .container {
+    width: 100%;
+  }
+  .btn-container {
+    gap: 20px;
+  }
+  .main-container > h2 {
+    font-size: 1.3em;
+  }
+  .question-container {
+    width: 100%;
+  }
+  .main-container .btn {
+    font-size: 0.9em;
+  }
+}
