@@ -1,5 +1,4 @@
 import React from "react";
-import { nanoid } from "nanoid";
 import Choices from "./Choices";
 function Question(props) {
   const choicesElement = props.answers.answersWithIds.map((c) => {
